@@ -226,3 +226,93 @@ let arr = [1, 2, 3 ,4 ,5 ]
 // // obj.c = 30  -> adding value in object from outside
 // console.log(obj);
 
+
+
+// in operand  
+
+// let obj = {
+//     x:10 ,
+//     y: 20, 
+//     z: "ADil"
+// }
+
+// console.log("x" in obj); // এটার মাধ্যমে অবজেক্ট এর প্রোপার্টি গুলো চেক করা যায় যে এটা অব্জেক্টে আছে কি না, থাকলে ট্রু না থাকলে ফলস
+
+
+
+// for in loop
+
+
+// for(let i in obj){
+//     console.log(i + " : " +obj[i]);  // for in loop used in object 
+// }
+
+// console.log(Object.keys(obj)); // keys return kore
+// console.log(Object.values(obj));// values return kore
+// console.log(Object.entries(obj));// [keys, Values] akare multidimensional array return kore
+
+// let obj2 = Object.assign(obj) // Create new object from obj with all its property
+// obj2.z = "Emad" 
+// console.log(obj2);
+
+
+//Function 
+// function adil()
+// {
+//     console.log("Emad Uddin Adil");
+// }
+
+// adil()
+
+
+// function sub()
+// {
+//     let a=10 ,b =20; 
+
+//     console.log(c=b-a);
+// }
+
+// sub() 
+
+// function add()
+// {
+//     let a=10 ,b =20; 
+
+//     console.log(c=a+b);
+// }
+
+// add() 
+
+// function sub(a , b )
+// {
+
+//     console.log(c=a+b);
+// }
+
+// sub(200, 100)
+
+// let arr1 =[1,2,3]
+// let arr2 =[10,20,30]
+// let arr3 =[11,20,33]
+
+// function sumOfArr(arr)
+// {
+//     sum = 0
+//     for(let i =0; i<arr.length; i++){
+//         sum += arr[i];
+
+//     }
+//     console.log(sum);
+// } 
+// sumOfArr(arr2) 
+
+// function multiplyOfArr(arr)
+// {
+//     sum = 1
+//     for(let i =0; i<arr.length; i++){
+//         sum *= arr[i];
+
+//     }
+//     console.log(sum);
+// } 
+// multiplyOfArr(arr3)
