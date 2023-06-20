@@ -194,7 +194,7 @@
 
 
 // Searching in Array
-let arr = [1, 2, 3 ,4 ,5 ] 
+//let arr = [1, 2, 3 ,4 ,5 ] 
 // let find = 40
 // let  isFound = false
 // for(let i=0 ; i <arr.length ;i++){
@@ -316,3 +316,162 @@ let arr = [1, 2, 3 ,4 ,5 ]
 //     console.log(sum);
 // } 
 // multiplyOfArr(arr3)
+
+// First Class Function
+
+//Function can be store in a variable
+//  function add(a ,b ){
+// return a+b ;
+//  }
+//  let sum = add ;
+
+//  console.log(sum(4, 5));
+
+ //Function can be store in a array
+// let arr = [] 
+// arr.push(add)
+// console.log(arr[0](5, 3)); 
+
+//Function can be store in a object
+
+// let obj= {
+//     a: add
+// }
+// console.log(obj.a(5,3));
+
+//we can create a function when it needs
+
+// setTimeout(function () {
+//     console.log("Emad Uddin ADil");
+// },2*1000);
+
+//Higher Order Function 
+
+
+// function add(a ,b ){
+//     return a+b 
+//      } 
+
+// function random(a, b, func){
+//     let c = a+b 
+//     let d = a-b 
+
+//     return function() { 
+//         let m =func(a,b)
+//         return c*d*m 
+//     }
+// }
+// let a =random(1,2, add)
+// console.log(a()); 
+
+//forEach function 
+
+//let arr = [1,2,3,4,5] 
+// var sum =0
+// arr.forEach((value ,index , array )=>{
+//     sum+= value
+//     console.log(value,index);
+// })
+// console.log(sum);
+
+// foreach function made in custom code
+
+// function foreacH(arr , CB){
+//     for(let i =0 ;i<arr.length ;i++){
+//         CB(arr[i], i ,arr)
+//     }
+// } 
+// sum =0
+// foreacH(arr, function(value, index ,array){
+//     console.log(value ,index ,array);
+//  sum+= value
+
+// }) 
+// console.log(sum); 
+
+
+// foreacH(arr,function(value, index ,array){
+// arr[index] =value+5 
+
+
+// }) 
+// console.log(arr); 
+
+// array.map function
+//  arr = [1,2,3,4,5] 
+
+//  let sqrArr  = arr.map(function(value){
+//     return value* value
+//  })
+
+//  console.log(arr);
+//  console.log(sqrArr); 
+
+// find and findIndex method 
+
+// let arr2= arr.find(function (value){
+//    return value == 4
+// } )
+// console.log(arr2); 
+// let arr12= arr.findIndex(function (value){
+//    return value == 4
+// } )
+// console.log(arr12); 
+
+// let myFind = function(arr, cb){
+//    for(let  i=0 ; i<arr.length; i++){
+//       if(cb(arr[i])){
+//          return i
+      
+//       }
+    
+//    }
+// } 
+
+// let result = myFind(arr , function(value){
+//    return value ==4
+// }) 
+// console.log(result);
+
+   let arr = [1,2,5,42,45,3,1,98,421,4,5] 
+
+   // arr.sort(function(a, b){
+   // if(a>b){
+   //    return 1
+   // }
+   // else if(a<b){
+   //    return -1
+   // }
+   // else{
+   //    return 0
+   // }
+   // })
+   // console.log(arr);
+
+   // let res1 = arr.every((value)=>{
+   //    return value%2==0
+   // })
+   // console.log(res1);
+
+   // let res2 = arr.some((value)=>{ 
+   //   return value<=0
+   // })
+   // console.log(res2); 
+
+
+   // simple power function 
+   // function base(b){
+   //    function power(p){
+   //      let result = 1;
+   //      for( let i = 0; i < p; i++){
+   //          result *= b;
+   //      }
+    
+   //      return result;
+   //    }
+   //    return power;
+   //  }
+    
+   //  let mainBase = base(2);
+   //  let mainPower = mainBase(5);
+   //  console.log(mainPower);
