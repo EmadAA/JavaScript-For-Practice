@@ -433,7 +433,7 @@
 // }) 
 // console.log(result);
 
-   let arr = [1,2,5,42,45,3,1,98,421,4,5] 
+ //  let arr = [1,2,5,42,45,3,1,98,421,4,5] 
 
    // arr.sort(function(a, b){
    // if(a>b){
@@ -474,4 +474,174 @@
     
    //  let mainBase = base(2);
    //  let mainPower = mainBase(5);
-   //  console.log(mainPower);
+   //  console.log(mainPower); 
+
+
+   // Recursoin function
+
+//    function adil(n) {
+//       if(n==1) {
+//          return
+//       } 
+//       else{
+//          console.log("Hello Adil")
+//          adil(n-1)
+//       }
+//    }
+ 
+// function fact(n) {
+//    if (n==1) {
+//       return 1
+//    }
+//    return n*fact(n-1)
+// }
+// console.log(fact(5))
+
+// SUm Of Array  
+
+// let arr=[1,5,3,41,8,23,1,8,4,9,4,8,2,4,9,87,52,1,98] 
+
+
+// function sumOfArray(arr ,LastIndex ){
+//    if(LastIndex<0){
+//       return 0
+//    } 
+//    return arr[LastIndex] + sumOfArray(arr ,LastIndex-1)
+// } 
+// console.log(sumOfArray(arr, arr.length-1));
+
+
+
+
+// Multiplication of Array Elements
+// let arr1=[1,5,3] 
+
+
+// function multiplyOfArray(arr ,LastIndex ){
+//    if(LastIndex<0){
+//       return 1
+//    } 
+//    return arr[LastIndex] * multiplyOfArray(arr ,LastIndex-1)
+// } 
+// console.log(multiplyOfArray(arr1, arr1.length-1));
+
+
+// Number english to bangla conversion
+// let obj = {
+//    ".":"." ,
+//    "1": "১",
+//    "2": "২",
+//    "3": "৩",
+//    "4": "৪",
+//    "5": "৫",
+//    "6": "৬",
+//    "7": "৭ ",
+//    "8": "৮",
+//    "9": "৯",
+// }
+// function numberToBn(number){
+//    return number.toString().split("").map((e)=>(
+//       (obj[e]?obj[e]:"")
+//    ))
+// }
+
+// console.log(numberToBn("125.54").join(""));
+
+//OOP in JS 
+
+// let rect = {
+//    height : 400, 
+//    width : 200 ,
+//    draw : function() {
+//       console.log("I am Adil")
+//       console.log("My Width is " + this.width)
+//       console.log("My Height is " + this.height)
+//    }
+// } 
+
+// rect.draw()
+
+// rect.height = 250 
+// rect.draw()
+
+// console.log(this);
+
+// Object accessors (getter & setter) 
+
+// let person ={
+//   firstName: "Emad", 
+//   lastName :"Adil" , 
+//   language: "Javascript" ,
+ 
+//   get lang(){
+//    return this.language 
+//   }
+// }
+// console.log(person.lang);
+
+
+// let person ={
+//    firstName: "Emad", 
+//    lastName :"Adil" , 
+//    language: "" ,
+  
+//    set llang(lang){
+//      this.language =lang
+//    }
+// } 
+// person.llang ="Javascript"
+// console.log(person);
+
+
+// ES6 
+// Template string 
+
+// let tempStr = `       jdbf
+// asducfhdf
+// ajdsf
+// dfcno` 
+// console.log(tempStr.trim()); // trim method remove space at first and last in a variable
+
+// let age =22 
+// let name = "Adil"
+// let result = `My name is ${name} and my age is ${age}`
+// console.log(result); 
+
+// console.log(name.padStart(10, 'a'));
+// console.log(name.padEnd(10, 'a').repeat(5));
+
+
+// Object Destructure 
+
+// let person ={
+//    name : 'Emad Adil' ,
+//    age: 22, 
+//    address: {
+//       city :'Sylhet', 
+//       country :' BD'
+//    }
+// } 
+
+
+// let {name ,age,address, address:{city , country} } = person  // this is call object destructuring 
+
+// console.log(name, age, city, address , country); 
+
+// object to array 
+
+// let obj ={ 
+//   a :10 ,
+//   b: 20
+// } 
+
+// let arr = Object.entries(obj) 
+// console.log(arr); 
+
+// Array to Object 
+
+let arr = [
+  ['a' , '10'],
+  ['b', '20']
+] 
+let obj = Object.fromEntries(arr) 
+console.log(obj);
