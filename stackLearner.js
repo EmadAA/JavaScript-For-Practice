@@ -639,9 +639,218 @@
 
 // Array to Object 
 
-let arr = [
-  ['a' , '10'],
-  ['b', '20']
-] 
-let obj = Object.fromEntries(arr) 
-console.log(obj);
+// let arr = [
+//   ['a' , '10'],
+//   ['b', '20']
+// ] 
+// let obj = Object.fromEntries(arr) 
+// console.log(obj);
+// if('object'[Symbol.iterator]){
+//   console.log('True');
+// }
+// else{
+//   console.log("False");
+// }  
+
+// let iterateStr = " Emad " 
+// let iterate = iterateStr[Symbol.iterator]()
+// console.log(iterate.next());
+// console.log(iterate.next());
+// console.log(iterate.next());
+// console.log(iterate.next());
+// console.log(iterate.next());
+// console.log(iterate.next());
+// console.log(iterate.next());
+// console.log(iterate.next());
+
+ // For of loop 
+
+
+
+//  let arrStr =['adil' ,'emad' ,[1,2,5]]
+//  for(let x of arrStr ){
+//   console.log(x);
+//  } 
+
+// Set dataStructure in javaScript 
+
+
+// let arr =['adil', 'emad','tasin']
+// let arr2 =[1,2,3,4,5]
+// let set = new Set(arr)
+// let set2 = new Set(arr2) 
+
+// set.add(1)
+// set.delete(1)
+// console.log(set); 
+// console.log(set.entries());
+// console.log(set.values());
+// console.log(set.has("adil"));
+// console.log(set2); 
+
+//Map in javaScript 
+
+// let map = new Map([
+//   ['a' , 10],
+//   ['b' , 20],
+//   ['c' , 30],
+// ])  
+// map.set('d',100)
+// console.log(map.get('a'));
+// map.delete('a')
+// console.log(map);
+// console.log(map.has('c'));
+// map.clear() 
+// console.log(map);
+// map.forEach((v, k)=>{
+// console.log(k,v);
+// })\
+
+// class Adil {
+//   constructor(name , age){
+//     name = this.name 
+//     age = this.age
+//   }
+//   draw(){
+//     console.log("I love You");
+//   }
+// }
+
+// let adil = new Adil("Emad" , 22)
+// console.log(adil);
+
+
+// Inheritance in ES6 
+
+// class Person{
+//   constructor(color){
+//     this.color = color
+//   }
+//   status() {
+//     console.log("I love You ");
+//   }
+  
+// }
+
+// class Men extends Person {
+//   constructor(color ,age, salary){
+//     super(color) 
+//     this.age = age
+//     this.salary = salary
+
+//   }
+//   sum() {
+//     return (this.age + this.salary) 
+//   }
+// }
+
+// let men = new Men("Men in Black" ,22, 250000)
+// console.log(men);
+// men.status() 
+
+
+// try-catch method 
+
+// try{
+//   console.log('1')
+//   throw new Error("Love you ")
+//   console.log('12')
+//   console.log('11')
+//   console.log('13.')
+// }
+// catch(e){
+//   console.log(e.message);
+// } 
+// finally{
+//   console.log("Its FInal");
+// }
+
+
+// AJAX Code 
+
+// const xhr = new XMLHttpRequest() 
+// xhr.open('get', 'https://jsonplaceholder.typicode.com/users')
+
+// xhr.onreadystatechange= function(e){
+//   if(xhr.readyState=== 4){
+//     if(xhr.status=== 200) {
+//       console.log(xhr.response);
+//     }
+//     else{
+//       console.log(xhr.status);
+//     }
+//   }
+// }
+
+// xhr.send()  
+
+// custom made AJAX 
+
+// function getRequest (url, cb) {
+
+//   const xhr = new XMLHttpRequest() 
+//   xhr.open('get', url) 
+
+//   xhr.onreadystatechange= function(e){
+//     if(xhr.readyState=== 4){
+//       if(xhr.status=== 200) {
+//         let response = JSON.parse(xhr.response) 
+//         cb(null, response)
+//       }
+//       else{
+//         cb(xhr.status , null)    
+//       }
+//     }
+//   } 
+//   xhr.send()
+// }
+
+// getRequest('https://jsonplaceholder.typicode.com/users', (err, res)=>{
+//   if(err){
+//     console.log(err);
+//   }
+//   else{
+
+// // console.log(res);
+//     res.map(r => console.log(r.email))
+//   }
+// }) 
+
+
+// getRequest('https://jsonplaceholder.typicode.com/posts', (err, res)=>{
+//   if(err){
+//     console.log(err);
+//   }
+//   else{
+//     console.log(res);
+//   }
+// })
+
+
+ let list = document.getElementById("list") 
+
+// let li= document.createElement("li") 
+// li.innerHTML = " Four" 
+
+// list.appendChild(li)
+
+
+let li = createElement('li', 'list-item' ,'Four')
+let li2 = createElement('li', 'list-item' ,'Five')
+
+
+function createElement(tagName, ClassName, innerHTML){
+  let tag = document.createElement(tagName) 
+  tag.ClassName = ClassName || ''
+
+  tag.innerHTML = innerHTML || ''
+
+  return tag
+} 
+
+list.appendChild(li)
+list.appendChild(li2)
+
+let p = createElement('p', 'Paragraph', 'lisabibswvibsi vsbvi v ivbfihvhefbvief  b fvbvihfebv dv ubgvi sdbv sdhv wdivhb iwdfbgv iigvb iwbg iwevb isdfjjvb sdjjhfb isjdbf isdjfb isdjfb ibf iasbgv ioabgv iiabhdg isdfvb ')
+let div= document.getElementById("cont")
+div.appendChild(p)
