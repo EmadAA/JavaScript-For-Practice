@@ -827,7 +827,7 @@
 // })
 
 
- let list = document.getElementById("list") 
+//  let list = document.getElementById("list") 
 
 // let li= document.createElement("li") 
 // li.innerHTML = " Four" 
@@ -835,22 +835,118 @@
 // list.appendChild(li)
 
 
-let li = createElement('li', 'list-item' ,'Four')
-let li2 = createElement('li', 'list-item' ,'Five')
+// let li = createElement('li', 'list-item' ,'Four')
+// let li2 = createElement('li', 'list-item' ,'Five')
 
 
-function createElement(tagName, ClassName, innerHTML){
-  let tag = document.createElement(tagName) 
-  tag.ClassName = ClassName || ''
+// function createElement(tagName, ClassName, innerHTML){
+//   let tag = document.createElement(tagName) 
+//   tag.ClassName = ClassName || ''
 
-  tag.innerHTML = innerHTML || ''
+//   tag.innerHTML = innerHTML || ''
 
-  return tag
-} 
+//   return tag
+// } 
 
-list.appendChild(li)
-list.appendChild(li2)
+// list.appendChild(li)
+// list.appendChild(li2)
 
-let p = createElement('p', 'Paragraph', 'lisabibswvibsi vsbvi v ivbfihvhefbvief  b fvbvihfebv dv ubgvi sdbv sdhv wdivhb iwdfbgv iigvb iwbg iwevb isdfjjvb sdjjhfb isjdbf isdjfb isdjfb ibf iasbgv ioabgv iiabhdg isdfvb ')
-let div= document.getElementById("cont")
-div.appendChild(p)
+// let p = createElement('p', 'Paragraph', 'lisabibswvibsi vsbvi v ivbfihvhefbvief  b fvbvihfebv dv ubgvi sdbv sdhv wdivhb iwdfbgv iigvb iwbg iwevb isdfjjvb sdjjhfb isjdbf isdjfb isdjfb ibf iasbgv ioabgv iiabhdg isdfvb ')
+// let div= document.getElementById("cont")
+// div.appendChild(p)
+
+
+// function getElement(id){
+//   let item = document.getElementById(id) 
+//   return item
+// }
+// let list2= getElement("list")
+// console.log(list2);
+
+// let p = new Promise((resolve, reject) => { 
+//   console.log("I am a promise");
+// })
+
+// let e = new Error("I Love You")
+// console.log(e.message);
+// let p = new Promise((res,rej)=>{
+//   setTimeout(() => {
+//     console.log("I am Done");
+//     rej(new Error("I love you"))
+//   }, 2500);
+// })
+// // to get the value
+// p.then((val)=>{
+//   console.log(val);
+// })
+
+// // to catch the error
+// p.catch((err)=>{
+//   console.log(err.message);
+// })
+
+// let p1 = new Promise((res,rej)=>{
+//   setTimeout(() => {
+//     console.log("Resolve after 2 second !"); 
+//     res(45)
+//   }, 2000);
+// })
+
+// p1.then(val=>{
+//   console.log(val);
+// })
+
+
+
+//Clock Using Immediately Invoke Function Expression
+
+
+( ()=>{
+ let Hours = document.getElementById("hours")
+ let Min = document.getElementById("min")
+ let Sec = document.getElementById("sec")
+ let ampm = document.getElementById("ampm")
+
+
+setInterval(()=>{
+  
+let date = new Date(); 
+let sec  =  date.getSeconds(); 
+let min = date.getMinutes()
+let hours = date.getHours();
+if(sec<10){
+   sec  = '0'+ date.getSeconds(); 
+}
+if(min<10){
+  min  = '0' + date.getMinutes(); 
+}
+
+if(hours==0 && hours <= 12)
+{
+  if(hours==0){
+   
+    hours  = 12 ; 
+    ampm.innerHTML = "AM"
+    
+  }
+  
+  else if(hours <  12){
+    
+    hours = '0' +hours
+    ampm.innerHTML = "AM"
+  
+  }}
+
+if(hours > 12){
+ 
+  hours  = date.getHours() - 12 ; 
+  hours = '0' + hours
+  ampm.innerHTML = "PM"
+
+}
+
+
+  `${Hours.innerHTML= hours} : ${Min.innerHTML = min} : ${Sec.innerHTML = sec} `
+}, 1000)} ) () ;
+
+// End
