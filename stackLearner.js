@@ -940,7 +940,10 @@ if(hours==0 && hours <= 12)
 if(hours > 12){
  
   hours  = date.getHours() - 12 ; 
-  hours = '0' + hours
+  if(hours<10)
+  {
+    hours = '0' + hours
+  }
   ampm.innerHTML = "PM"
 
 }
