@@ -20,5 +20,20 @@
       <span id="sec"></span> <span id="ampm"></span>
     </div>
     <script src="stackLearner.js"></script>
+    <script>
+      let docTitle = document.title;
+      window.addEventListener("blur", () => {
+        setInterval(() => {
+          document.title = "Come Back please";
+        }, 1000);
+        setInterval(() => {
+          document.title = "Come Back bro";
+        }, 2000);
+      });
+
+      window.addEventListener("focus", () => {
+        document.title = docTitle;
+      });
+    </script>
   </body>
 </html>
