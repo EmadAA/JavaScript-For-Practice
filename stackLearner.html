@@ -23,12 +23,7 @@
     <script>
       let docTitle = document.title;
       window.addEventListener("blur", () => {
-        setInterval(() => {
-          document.title = "Come Back please";
-        }, 1000);
-        setInterval(() => {
-          document.title = "Come Back bro";
-        }, 2000);
+        document.title = "Come back!";
       });
 
       window.addEventListener("focus", () => {

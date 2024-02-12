@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Share</title>
+  </head>
+  <style>
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .video {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <button class="start">Start Screen Share</button>
+      <button class="stop" style="display: none">Stop Screen Share</button>
+
+      <div class="video">
+        <video id="video" autoplay></video>
+      </div>
+    </div>
+
+    <script>
+      //   startButton.onclick = async () => {
+      //     try {
+      //       const screen = await navigator.mediaDevices.getDisplayMedia();
+      //       videoElement.srcObject = screen;
+      //     } catch (err) {
+      //       console.error("Error accessing screen:", err);
+      //     }
+      //   };
+      //   stopButton.onclick = async () => {
+      //     try {
+      //       const screen = await navigator.mediaDevices.getDisplayMedia(false);
+      //       videoElement.srcObject = null;
+      //     } catch (err) {
+      //       console.error("Error accessing screen:", err);
+      //     }
+      //   };
+
+      const startButton = document.querySelector(".start");
+      const stopButton = document.querySelector(".stop");
+      const videoElement = document.getElementById("video");
+      let screenStream = null;
+
+      startButton.onclick = async () => {
+        try {
+          screenStream = await navigator.mediaDevices.getDisplayMedia();
+          videoElement.srcObject = screenStream;
+          startButton.style.display = "none";
+          stopButton.style.display = "inline-block";
+        } catch (err) {
+          console.error("Error accessing screen:", err);
+        }
+      };
+
+      stopButton.onclick = () => {
+        if (screenStream) {
+          const tracks = screenStream.getTracks();
+          tracks.forEach((track) => track.stop());
+          videoElement.srcObject = null;
+          startButton.style.display = "inline-block";
+          stopButton.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
