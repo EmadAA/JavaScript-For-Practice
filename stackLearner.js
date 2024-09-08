@@ -901,55 +901,62 @@
 //Clock Using Immediately Invoke Function Expression
 
 
-( ()=>{
- let Hours = document.getElementById("hours")
- let Min = document.getElementById("min")
- let Sec = document.getElementById("sec")
- let ampm = document.getElementById("ampm")
+// ( ()=>{
+//  let Hours = document.getElementById("hours")
+//  let Min = document.getElementById("min")
+//  let Sec = document.getElementById("sec")
+//  let ampm = document.getElementById("ampm")
 
 
-setInterval(()=>{
+// setInterval(()=>{
   
-let date = new Date(); 
-let sec  =  date.getSeconds(); 
-let min = date.getMinutes()
-let hours = date.getHours();
-if(sec<10){
-   sec  = '0'+ date.getSeconds(); 
-}
-if(min<10){
-  min  = '0' + date.getMinutes(); 
-}
+// let date = new Date(); 
+// let sec  =  date.getSeconds(); 
+// let min = date.getMinutes()
+// let hours = date.getHours();
+// if(sec<10){
+//    sec  = '0'+ date.getSeconds(); 
+// }
+// if(min<10){
+//   min  = '0' + date.getMinutes(); 
+// }
 
-if(hours==0 && hours <= 12)
-{
-  if(hours==0){
+// if(hours==0 && hours <= 12)
+// {
+//   if(hours==0){
    
-    hours  = 12 ; 
-    ampm.innerHTML = "AM"
+//     hours  = 12 ; 
+//     ampm.innerHTML = "AM"
     
-  }
+//   }
   
-  else if(hours <  12){
+//   else if(hours <  12){
     
-    hours = '0' +hours
-    ampm.innerHTML = "AM"
+//     hours = '0' +hours
+//     ampm.innerHTML = "AM"
   
-  }}
+//   }}
 
-if(hours > 12){
+// if(hours > 12){
  
-  hours  = date.getHours() - 12 ; 
-  if(hours<10)
-  {
-    hours = '0' + hours
-  }
-  ampm.innerHTML = "PM"
+//   hours  = date.getHours() - 12 ; 
+//   if(hours<10)
+//   {
+//     hours = '0' + hours
+//   }
+//   ampm.innerHTML = "PM"
 
-}
+// }
 
 
-  `${Hours.innerHTML= hours} : ${Min.innerHTML = min} : ${Sec.innerHTML = sec} `
-}, 1000)} ) () ;
+//   `${Hours.innerHTML= hours} : ${Min.innerHTML = min} : ${Sec.innerHTML = sec} `
+// }, 1000)} ) () ;
 
 // End
+
+// let n = "Adil"
+// if(n === "Adil")
+// {
+//   n = "Emad"
+// }
+// console.log(n);
